@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Saya</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      scroll-behavior: smooth;
+      transition: background 0.5s ease-in-out;
+      
+    }.bg-hutan {
+  background: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2g2eHl5Zmo4aDFmNjdyNTRyMTY4YXJucXJxczd1am81Z2l4bW80cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AdwzrcftXDkZtu1hBF/giphy.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+    .backdrop {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+    .scroll-reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .project-card {
+      transition: transform 0.4s, background-color 0.4s;
+    }
+    .project-card:hover {
+      background-color: rgba(16, 185, 129, 0.6);
+      transform: scale(1.07) rotate(-1deg);
+    }
+    .sosial-icon {
+      transition: transform 0.3s, color 0.3s;
+      display: inline-block;
+    }
+    .sosial-icon:hover {
+      color: #34d399;
+      transform: scale(1.3) rotate(12deg);
+    }
+    .animate-glow {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #34d399, 0 0 20px #34d399; }
+      to { text-shadow: 0 0 20px #10b981, 0 0 30px #10b981; }
+    }
+    #menu {
+      transition: max-height 0.5s ease-in-out;
+      overflow: hidden;
+    }
+    .marquee {
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+      display: flex;
+    }
+    .animate-marquee {
+      display: flex;
+      animation: marquee 12s linear infinite;
+    }
+    .marquee img {
+      display: inline-block;
+      margin-right: 2rem;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body class="bg-hutan text-white min-h-screen" id="home">
+  <div class="backdrop min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-black bg-opacity-60 fixed w-full z-20 top-0 left-0 border-b border-gray-600">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="text-2xl font-bold animate-glow">Portofolio Rifaldi</a>
+        <button id="menu-btn" class="md:hidden text-gray-300 focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <div id="menu" class="hidden md:flex md:space-x-6 text-lg">
+          <a href="#home" class="hover:text-green-400 transition">Home</a>
+          <a href="#about" class="hover:text-green-400 transition">Tentang Saya</a>
+          <a href="#projects" class="hover:text-green-400 transition">Proyek</a>
+          <a href="#sosial" class="hover:text-green-400 transition">Media Sosial</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="flex items-center justify-center h-screen fade-in pt-20">
+      <div class="text-center px-4">
+        <h2 class="text-4xl md:text-6xl font-bold mb-4 animate-glow">Halo, Saya Rifaldi</h2>
+        <p class="text-xl md:text-2xl">Selamat datang di portofolio saya</p>
+        <a href="#projects" class="mt-6 inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg transition-transform transform hover:scale-105">Lihat Proyek</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 md:px-20 scroll-reveal">
+      <h3 class="text-3xl md:text-4xl font-semibold mb-6">Tentang Saya</h3>
+      <p class="text-lg md:text-xl leading-relaxed max-w-3xl">
+        Saya adalah Mahasiswa dari Universitas Islam Al banjari Kalimantan selatan, dan saya mengambil jurusan Informatika.
+      </p>
+      <div class="marquee mt-10">
+        <div class="animate-marquee">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" width="60" alt="HTML">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width="60" alt="CSS">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" width="60" alt="JavaScript">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732073.png" width="60" alt="Tailwind">
+        </div>
+        <div class="animate-marquee">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" width="60" alt="HTML">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width="60" alt="CSS">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" width="60" alt="JavaScript">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732073.png" width="60" alt="Tailwind">
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 md:px-20 scroll-reveal">
+      <h3 class="text-3xl md:text-4xl font-semibold mb-10">Proyek Saya</h3>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="project-card cursor-pointer bg-white bg-opacity-10 rounded-xl p-4 shadow-md">
+          <h4 class="text-2xl font-bold mb-2">WEBSITE PTHREE</h4>
+          <p>WEBSITE KOMUNITAS BACA. SILAHKAN TEKAN TOMBOL GLOBE INI.</p>
+          <a href="https://pthreee.w3spaces.com/" class="sosial-icon">🌐</a>
+        </div>
+        <div class="project-card cursor-pointer bg-white bg-opacity-10 rounded-xl p-4 shadow-md">
+          <h4 class="text-2xl font-bold mb-2">HERITAGE ROLEPLAY</h4>
+          <p>SERVER HERITAGE YANG DIMANA SERVER ROLEPLAY YANG MEMILIKI CULTUR MIX. SILAHKAN TEKAN TOMBOL GLOBE INI.</p>
+          <a href="https://discord.gg/QR43Dnz3Kq" class="sosial-icon">🌐</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sosial Media Section -->
+    <section id="sosial" class="py-20 px-6 md:px-20 scroll-reveal">
+      <h3 class="text-3xl md:text-4xl font-semibold mb-6">Hubungi Saya Di Media Sosial saya</h3>
+      <div class="flex space-x-6 text-3xl">
+        <a href="https://www.instagram.com/ferdy406_/" target="_blank" rel="noopener noreferrer" class="sosial-icon">📸</a>
+        <a href="https://x.com/FERDyY666" target="_blank" rel="noopener noreferrer" class="sosial-icon">🐦</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="sosial-icon">💼</a>
+        <a href="mailto:rifaldi0823666@gmail.com" class="sosial-icon">✉️</a>
+      </div>
+ 
+  <script>
+    // Scroll Reveal effect
+    const reveals = document.querySelectorAll('.scroll-reveal');
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      reveals.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          el.classList.add('revealed');
+        }
+      });
+    });
+
+    // Responsive navbar toggle
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
